@@ -43,30 +43,34 @@ Portfolio/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - A modern web browser
 - Basic knowledge of HTML/CSS/JavaScript (for customization)
 
 ### Installation
 
 1. **Clone or Download** the repository
+
    ```bash
    git clone https://github.com/yourusername/portfolio.git
    cd portfolio
    ```
 
 2. **Open** `index.html` in your web browser
+
    - Double-click the file, or
    - Drag and drop into your browser, or
    - Use a local server (recommended)
 
 3. **Local Server** (Optional but recommended)
+
    ```bash
    # Using Python 3
    python -m http.server 8000
-   
+
    # Using Node.js
    npx serve .
-   
+
    # Using PHP
    php -S localhost:8000
    ```
@@ -76,6 +80,7 @@ Portfolio/
 ## 🎨 Customization Guide
 
 ### 1. Personal Information
+
 Update the following in `index.html`:
 
 ```html
@@ -90,46 +95,64 @@ Update the following in `index.html`:
 ```
 
 ### 2. Profile Photo
+
 1. **Place your photo** in the `images/` folder
 2. **Update the image path** in `index.html`:
    ```html
-   <img src="images/your-photo.jpg" alt="Your Name's Photo" class="profile-photo">
+   <img
+     src="images/your-photo.jpg"
+     alt="Your Name's Photo"
+     class="profile-photo"
+   />
    ```
 
 ### 3. Skills
+
 Modify the skills section in `index.html`:
+
 ```html
 <div class="skill-tags">
-    <span class="skill-tag">Your Skill 1</span>
-    <span class="skill-tag">Your Skill 2</span>
-    <span class="skill-tag">Your Skill 3</span>
+  <span class="skill-tag">Your Skill 1</span>
+  <span class="skill-tag">Your Skill 2</span>
+  <span class="skill-tag">Your Skill 3</span>
 </div>
 ```
 
 ### 4. Resume Link
+
 Update the resume link with your Google Drive URL:
+
 ```html
-<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing" 
-   class="resume-button" target="_blank" rel="noopener noreferrer">
+<a
+  href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
+  class="resume-button"
+  target="_blank"
+  rel="noopener noreferrer"
+></a>
 ```
 
 ### 5. Social Links
+
 Update your social media profiles:
+
 ```html
 <a href="https://github.com/yourusername" class="social-link github">
-<a href="https://linkedin.com/in/yourusername" class="social-link linkedin">
-<a href="mailto:your.email@example.com" class="social-link email">
+  <a href="https://linkedin.com/in/yourusername" class="social-link linkedin">
+    <a href="mailto:your.email@example.com" class="social-link email"></a></a
+></a>
 ```
 
 ### 6. Colors and Styling
+
 Customize the color scheme in `style.css`:
+
 ```css
 :root {
-    --primary-color: #4A90E2;      /* Main blue */
-    --secondary-color: #357ABD;    /* Darker blue */
-    --accent-color: #f8f9fa;      /* Light gray */
-    --text-color: #333;            /* Dark text */
-    --white: #ffffff;              /* Pure white */
+  --primary-color: #4a90e2; /* Main blue */
+  --secondary-color: #357abd; /* Darker blue */
+  --accent-color: #f8f9fa; /* Light gray */
+  --text-color: #333; /* Dark text */
+  --white: #ffffff; /* Pure white */
 }
 ```
 
@@ -142,6 +165,7 @@ The website is built with a mobile-first approach:
 - **Mobile**: Single-column layout with hamburger navigation
 
 ### Breakpoints
+
 - **Mobile**: < 480px
 - **Tablet**: 480px - 768px
 - **Desktop**: > 768px
@@ -210,16 +234,8 @@ This project is open source and available under the [MIT License](LICENSE).
 - **CSS Grid & Flexbox** for modern layouts
 - **Intersection Observer API** for smooth animations
 
-## 📞 Support
-
-If you have any questions or need help customizing your portfolio:
-
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/portfolio/issues)
-- **Documentation**: Check this README for customization guides
-
 ---
 
 ⭐ **Star this repository** if you found it helpful!
 
-**Built with ❤️ by [Your Name]**
+**Built with ❤️ by [Jafrul Amin]**
