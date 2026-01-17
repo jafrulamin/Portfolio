@@ -39,9 +39,14 @@ export const About = () => {
               {/* Profile Image */}
               <div className="w-64 h-64 mx-auto lg:mx-0 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 gradient-border flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/images/Jafrul_Amin.jpg" 
+                  src="https://drive.google.com/thumbnail?id=1TbHWuWR8ptNLKh1LzOhN0F3CKzrESCgj&sz=w1000"
                   alt="Jafrul Amin" 
                   className="w-60 h-60 rounded-xl object-cover"
+                  onError={(e) => {
+                    // Fallback to alternative Google Drive URL format
+                    const target = e.target as HTMLImageElement;
+                    target.src = `https://drive.google.com/uc?export=view&id=1TbHWuWR8ptNLKh1LzOhN0F3CKzrESCgj`;
+                  }}
                 />
               </div>
               
