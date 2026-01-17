@@ -8,6 +8,9 @@ A modern, responsive personal portfolio website built with React, TypeScript, an
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 
+
+
+
 ## ✨ Features
 
 - 🎨 **Modern Dark Theme**: Beautiful dark-themed design with purple and cyan accents
