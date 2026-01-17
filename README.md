@@ -1,51 +1,79 @@
 # 🚀 Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript. Features a clean design, smooth animations, and mobile-first responsive layout.
+A modern, responsive personal portfolio website built with React, TypeScript, and Tailwind CSS. Features a dark-themed design, smooth animations, and a fully responsive mobile-first layout.
 
 ![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 
 ## ✨ Features
 
-- 🎨 **Modern Design**: Clean, professional layout with blue + white + gray color scheme
-- 📱 **Fully Responsive**: Mobile-first design that works on all devices
+- 🎨 **Modern Dark Theme**: Beautiful dark-themed design with purple and cyan accents
+- 📱 **Fully Responsive**: Mobile-first design that works seamlessly on all devices
 - 🚀 **Smooth Animations**: Fade-in effects, hover animations, and smooth scrolling
-- 🧭 **Interactive Navigation**: Fixed navbar with active section highlighting
-- 📸 **Profile Section**: Professional photo display with hover effects
-- 💼 **Resume Integration**: Direct link to Google Drive resume
-- 🔗 **Social Links**: GitHub, LinkedIn, and email integration
-- 🎯 **Skills Showcase**: Interactive skill tags with hover effects
+- 🧭 **Interactive Navigation**: Fixed navbar with mobile menu and active section highlighting
+- 📸 **Profile Section**: Professional photo display with gradient borders and hover effects
+- 💼 **Resume Integration**: Embedded Google Docs resume with download and view options
+- 🔗 **Social Links**: GitHub, LinkedIn, and email integration with hover effects
+- 🎯 **Skills Showcase**: Comprehensive tech stack organized by categories
 - 🌐 **Cross-browser Compatible**: Works on all modern browsers
-- ⚡ **Fast Loading**: Optimized for performance and SEO
+- ⚡ **Fast Loading**: Optimized build with Vite for lightning-fast performance
+- 🎭 **Component-Based**: Modular React components for easy maintenance
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic markup and accessibility
-- **CSS3**: Modern styling with Flexbox, Grid, and animations
-- **JavaScript (ES6+)**: Interactive features and smooth scrolling
-- **Font Awesome**: Professional icons
-- **Google Fonts**: Clean typography
+- **React 18**: Modern UI library for building interactive interfaces
+- **TypeScript**: Type-safe JavaScript for better development experience
+- **Vite**: Next-generation frontend build tool for fast development
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **Lucide React**: Beautiful icon library
+- **Radix UI**: Accessible component primitives
+- **Class Variance Authority**: For component variants
+- **Tailwind Merge**: For merging Tailwind classes
 
 ## 📁 Project Structure
 
 ```
 Portfolio/
-├── index.html          # Main HTML file
-├── style.css           # CSS styles and responsive design
-├── script.js           # JavaScript functionality
-├── images/             # Image assets folder
-│   └── Jafrul_Amin.jpg # Profile photo
-└── README.md           # Project documentation
+├── public/
+│   └── images/
+│       └── Jafrul_Amin.jpg    # Profile photo
+├── src/
+│   ├── components/
+│   │   ├── ui/                # Reusable UI components
+│   │   │   ├── button.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── textarea.tsx
+│   │   │   ├── badge.tsx
+│   │   │   └── card.tsx
+│   │   ├── Navbar.tsx         # Navigation component
+│   │   ├── Hero.tsx           # Hero section
+│   │   ├── About.tsx          # About section
+│   │   ├── Projects.tsx       # Projects showcase
+│   │   ├── Resume.tsx         # Resume section
+│   │   ├── Contact.tsx        # Contact form
+│   │   └── Footer.tsx         # Footer component
+│   ├── lib/
+│   │   └── utils.ts           # Utility functions
+│   ├── App.tsx                # Main app component
+│   ├── main.tsx               # Entry point
+│   └── index.css              # Global styles and Tailwind
+├── index.html                 # HTML template
+├── package.json               # Dependencies
+├── tsconfig.json              # TypeScript config
+├── vite.config.ts             # Vite config
+├── tailwind.config.ts         # Tailwind config
+└── README.md                  # This file
 ```
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- A modern web browser
-- Basic knowledge of HTML/CSS/JavaScript (for customization)
+- **Node.js** (v18 or higher recommended)
+- **npm** or **yarn** package manager
 
 ### Installation
 
@@ -56,105 +84,122 @@ Portfolio/
    cd portfolio
    ```
 
-2. **Open** `index.html` in your web browser
-
-   - Double-click the file, or
-   - Drag and drop into your browser, or
-   - Use a local server (recommended)
-
-3. **Local Server** (Optional but recommended)
+2. **Install Dependencies**
 
    ```bash
-   # Using Python 3
-   python -m http.server 8000
-
-   # Using Node.js
-   npx serve .
-
-   # Using PHP
-   php -S localhost:8000
+   npm install
    ```
 
-4. **View** your portfolio at `http://localhost:8000`
+3. **Start Development Server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **View** your portfolio at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The production build will be in the `dist/` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
 
 ## 🎨 Customization Guide
 
 ### 1. Personal Information
 
-Update the following in `index.html`:
+Update the following in `src/components/Hero.tsx`:
 
-```html
-<!-- Hero Section -->
-<h1 class="hero-title">Your Name</h1>
-<p class="hero-subtitle">Your Title</p>
-<p class="hero-description">Your tagline</p>
-
-<!-- About Section -->
-<h3>Hello! I'm Your Name</h3>
-<p class="bio">Your bio description</p>
+```tsx
+<h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4">
+  <span className="gradient-text">Your Name</span>
+</h1>
+<h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6">
+  Your Title
+</h2>
 ```
 
 ### 2. Profile Photo
 
-1. **Place your photo** in the `images/` folder
-2. **Update the image path** in `index.html`:
-   ```html
-   <img
-     src="images/your-photo.jpg"
-     alt="Your Name's Photo"
-     class="profile-photo"
+1. **Place your photo** in the `public/images/` folder
+2. **Update the image path** in `src/components/About.tsx`:
+
+   ```tsx
+   <img 
+     src="/images/your-photo.jpg" 
+     alt="Your Name" 
+     className="w-60 h-60 rounded-xl object-cover"
    />
    ```
 
-### 3. Skills
+### 3. Tech Stack
 
-Modify the skills section in `index.html`:
+Modify the tech stack in `src/components/About.tsx`:
 
-```html
-<div class="skill-tags">
-  <span class="skill-tag">Your Skill 1</span>
-  <span class="skill-tag">Your Skill 2</span>
-  <span class="skill-tag">Your Skill 3</span>
-</div>
+```tsx
+const techStack = [
+  { category: "Languages", items: ["JavaScript", "TypeScript", "Python"] },
+  // Add more categories...
+];
 ```
 
-### 4. Resume Link
+### 4. Projects
 
-Update the resume link with your Google Drive URL:
+Update projects in `src/components/Projects.tsx`:
 
-```html
-<a
-  href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
-  class="resume-button"
-  target="_blank"
-  rel="noopener noreferrer"
-></a>
+```tsx
+const projects = [
+  {
+    title: "Your Project",
+    description: "Project description",
+    tags: ["React", "TypeScript"],
+    github: "https://github.com/yourusername/project",
+    live: "https://yourproject.com",
+    featured: true,
+  },
+];
 ```
 
-### 5. Social Links
+### 5. Resume Link
 
-Update your social media profiles:
+Update the resume URL in `src/components/Resume.tsx`:
 
-```html
-<a href="https://github.com/yourusername" class="social-link github">
-  <a href="https://linkedin.com/in/yourusername" class="social-link linkedin">
-    <a href="mailto:your.email@example.com" class="social-link email"></a></a
-></a>
+```tsx
+const GOOGLE_DOCS_RESUME_URL = "https://docs.google.com/document/d/YOUR_FILE_ID/edit";
 ```
 
-### 6. Colors and Styling
+### 6. Social Links
 
-Customize the color scheme in `style.css`:
+Update social links in `src/components/Hero.tsx` and `src/components/Contact.tsx`:
+
+```tsx
+href="https://github.com/yourusername"
+href="https://linkedin.com/in/yourusername"
+href="mailto:your.email@example.com"
+```
+
+### 7. Colors and Theme
+
+Customize the color scheme in `src/index.css`:
 
 ```css
 :root {
-  --primary-color: #4a90e2; /* Main blue */
-  --secondary-color: #357abd; /* Darker blue */
-  --accent-color: #f8f9fa; /* Light gray */
-  --text-color: #333; /* Dark text */
-  --white: #ffffff; /* Pure white */
+  --primary: 262 83% 58%;        /* Purple */
+  --accent: 199 89% 48%;         /* Cyan */
+  --background: 222 47% 6%;      /* Dark background */
+  /* ... */
 }
 ```
+
+Or modify `tailwind.config.ts` for more advanced customization.
 
 ## 📱 Responsive Design
 
@@ -166,46 +211,60 @@ The website is built with a mobile-first approach:
 
 ### Breakpoints
 
-- **Mobile**: < 480px
-- **Tablet**: 480px - 768px
-- **Desktop**: > 768px
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
 
 ## 🌐 Deployment
 
-### GitHub Pages (Recommended)
+### Vercel (Recommended)
 
 1. **Push** your code to GitHub
-2. **Go to** Repository Settings → Pages
-3. **Select** source branch (usually `main` or `master`)
-4. **Your portfolio** will be live at `https://username.github.io/repository-name`
+2. **Import** your repository on [Vercel](https://vercel.com)
+3. **Deploy** - Vercel will automatically detect Vite and configure everything
+4. **Your portfolio** will be live instantly with automatic deployments on every push
 
 ### Netlify
 
-1. **Drag and drop** your project folder to [Netlify](https://netlify.com)
-2. **Get** a live URL instantly
-3. **Custom domain** available
+1. **Build command**: `npm run build`
+2. **Publish directory**: `dist`
+3. **Push** to GitHub and connect to [Netlify](https://netlify.com)
+4. **Deploy** automatically on every push
 
-### Vercel
+### GitHub Pages
 
-1. **Connect** your GitHub repository to [Vercel](https://vercel.com)
-2. **Automatic deployment** on every push
-3. **Custom domain** support
+1. **Install** `gh-pages` package:
+   ```bash
+   npm install -D gh-pages
+   ```
 
-## 🔧 Browser Support
+2. **Add** to `package.json`:
+   ```json
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d dist"
+   }
+   ```
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-- ✅ Mobile browsers
+3. **Deploy**:
+   ```bash
+   npm run deploy
+   ```
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
 ## 📈 Performance Features
 
-- **Lazy loading** for images
-- **CSS animations** with hardware acceleration
-- **Minimal JavaScript** for fast execution
-- **Optimized CSS** with efficient selectors
-- **Responsive images** for different screen sizes
+- **Code Splitting**: Automatic code splitting with Vite
+- **Tree Shaking**: Unused code elimination
+- **Optimized Assets**: Automatic asset optimization
+- **Fast Refresh**: Instant HMR during development
+- **TypeScript**: Type safety for better code quality
 
 ## 🎯 SEO Features
 
@@ -214,6 +273,7 @@ The website is built with a mobile-first approach:
 - Proper heading hierarchy
 - Alt text for images
 - Clean URL structure
+- Fast loading times
 
 ## 🤝 Contributing
 
@@ -229,10 +289,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- **Font Awesome** for beautiful icons
-- **Google Fonts** for typography
-- **CSS Grid & Flexbox** for modern layouts
-- **Intersection Observer API** for smooth animations
+- **React** for the amazing UI library
+- **Vite** for the blazing-fast build tool
+- **Tailwind CSS** for the utility-first CSS framework
+- **Lucide** for beautiful icons
+- **Radix UI** for accessible components
 
 ---
 
